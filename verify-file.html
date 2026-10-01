@@ -15,7 +15,7 @@ code{word-break:break-all}
 <p>The file is fingerprinted in your browser. Only its SHA-256 fingerprint is sent to the registry.</p>
 <label>Choose a file<input type="file" id="f" hidden></label>
 <p id="out" role="status" aria-live="polite"></p>
-<script src="../lib/sha256.js"></script>
+<script src="sha256.js"></script>
 <script>
 const API = 'https://human-origin-label.lochness-paris.com/api/v1/works?sha256=';
 const out = document.getElementById('out');

@@ -1,0 +1,5 @@
+Remplacer sur GitHub (Add file > Upload files, glisser ces 4 fichiers, Commit) :
+- README.md         (liens adaptés à l'arborescence à plat)
+- CITATION.cff      (vraie adresse du dépôt)
+- verify-file.html  (charge sha256.js au même niveau)
+- sha256-README.md  (nouveau : mode d'emploi de sha256.js)
