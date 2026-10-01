@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://human-origin-label.lochness-paris.com/schemas/api-creator-response.schema.json",
+  "title": "Human Origin API v1: creator response",
+  "description": "Response of GET {site}/api/v1/creators/{creator_id} (Specification v0.2, Section 9).",
+  "type": "object",
+  "required": [
+    "api_version",
+    "creator"
+  ],
+  "properties": {
+    "api_version": {
+      "const": "1"
+    },
+    "creator": {
+      "$ref": "creator-record.schema.json"
+    }
+  }
+}

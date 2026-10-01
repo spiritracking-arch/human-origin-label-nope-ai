@@ -1,0 +1,137 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://human-origin-label.lochness-paris.com/schemas/creator-record.schema.json",
+  "title": "Human Origin public creator record",
+  "description": "Public fields of a creator record, as returned by GET {site}/api/v1/creators/{creator_id} and shown on the verification page (Specification v0.2, Sections 3, 4, 6, 8 and 9).",
+  "type": "object",
+  "required": [
+    "id",
+    "status",
+    "name",
+    "disciplines",
+    "website",
+    "scope",
+    "reviewed_on",
+    "method",
+    "evidence",
+    "charter"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^HO-[0-9]{4}-[0-9]{4,6}$",
+      "examples": [
+        "HO-2026-0001"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "reviewed",
+        "revoked"
+      ]
+    },
+    "demo": {
+      "type": "boolean",
+      "default": false,
+      "description": "True for fictional demonstration records."
+    },
+    "revoked_on": {
+      "type": "string",
+      "format": "date"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "disciplines": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "writing",
+          "illustration",
+          "photography",
+          "music",
+          "video"
+        ]
+      }
+    },
+    "website": {
+      "type": "string",
+      "format": "uri"
+    },
+    "socials": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "scope": {
+      "type": "string",
+      "description": "The works or channels the review covers."
+    },
+    "reviewed_on": {
+      "type": "string",
+      "format": "date"
+    },
+    "method": {
+      "type": "string",
+      "examples": [
+        "Live video walkthrough",
+        "Screen recording with one-time code, sent via Signal"
+      ]
+    },
+    "evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "works": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/work"
+      }
+    },
+    "charter": {
+      "type": "string",
+      "examples": [
+        "1.0"
+      ]
+    },
+    "url": {
+      "type": "string",
+      "format": "uri"
+    }
+  },
+  "$defs": {
+    "work": {
+      "type": "object",
+      "required": [
+        "hash",
+        "title",
+        "date"
+      ],
+      "properties": {
+        "hash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$",
+          "description": "SHA-256 of the exact bytes of the original file, lowercase hex."
+        },
+        "title": {
+          "type": "string"
+        },
+        "date": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

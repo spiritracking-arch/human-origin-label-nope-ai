@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Check a file against the Human Origin registry</title>
+<style>
+body{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;max-width:640px;margin:40px auto;padding:0 20px;line-height:1.6;color:#0E1B2C}
+label{display:block;border:2px dashed #1E6B45;border-radius:8px;padding:28px;text-align:center;cursor:pointer;background:#EEF5F0}
+code{word-break:break-all}
+</style>
+</head>
+<body>
+<h1>Check a file</h1>
+<p>The file is fingerprinted in your browser. Only its SHA-256 fingerprint is sent to the registry.</p>
+<label>Choose a file<input type="file" id="f" hidden></label>
+<p id="out" role="status" aria-live="polite"></p>
+<script src="../lib/sha256.js"></script>
+<script>
+const API = 'https://human-origin-label.lochness-paris.com/api/v1/works?sha256=';
+const out = document.getElementById('out');
+document.getElementById('f').addEventListener('change', async e => {
+  const file = e.target.files[0]; if (!file) return;
+  out.textContent = 'Fingerprinting…';
+  const hash = await hoHashFile(file, p => out.textContent = 'Fingerprinting… ' + Math.round(p * 100) + '%');
+  out.innerHTML = 'Fingerprint: <code>' + hash + '</code><br>Checking the registry…';
+  try {
+    const data = await (await fetch(API + hash)).json();
+    if (!data.matches.length) { out.innerHTML += '<br><strong>No certified work matches this file.</strong>'; return; }
+    for (const m of data.matches) {
+      const line = m.status === 'reviewed' ? '✓ Exactly "' + m.title + '"' : '✕ Matches a revoked badge';
+      out.innerHTML += '<br><strong>' + line + '</strong> by ' + m.creator + ' · <a href="' + m.url + '">' + m.creator_id + '</a>';
+    }
+  } catch (err) { out.innerHTML += '<br>Could not reach the registry.'; }
+});
+</script>
+</body>
+</html>

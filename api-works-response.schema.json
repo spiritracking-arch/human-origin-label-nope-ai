@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://human-origin-label.lochness-paris.com/schemas/api-works-response.schema.json",
+  "title": "Human Origin API v1: works lookup response",
+  "description": "Response of GET {site}/api/v1/works?sha256={fingerprint} (Specification v0.2, Sections 8 and 9).",
+  "type": "object",
+  "required": [
+    "api_version",
+    "sha256",
+    "matches"
+  ],
+  "properties": {
+    "api_version": {
+      "const": "1"
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "matches": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "creator_id",
+          "creator",
+          "title",
+          "date",
+          "status",
+          "demo",
+          "url"
+        ],
+        "properties": {
+          "creator_id": {
+            "type": "string",
+            "pattern": "^HO-[0-9]{4}-[0-9]{4,6}$"
+          },
+          "creator": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "reviewed",
+              "revoked"
+            ],
+            "description": "A match on a revoked record MUST be reported as revoked."
+          },
+          "demo": {
+            "type": "boolean"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      }
+    }
+  }
+}
