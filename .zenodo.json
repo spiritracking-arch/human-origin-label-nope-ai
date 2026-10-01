@@ -1,0 +1,16 @@
+{
+  "title": "Human Origin Specification",
+  "upload_type": "publication",
+  "publication_type": "technicalnote",
+  "description": "<p>Open specification of the Human Origin label for human-made creative work: identifiers, statuses, review requirements, verification pages, badges, SHA-256 work fingerprints computed on the user's device, revocation, privacy and third-party conformance.</p><p>Online version: <a href=\"https://human-origin-label.lochness-paris.com/spec/\">human-origin-label.lochness-paris.com/spec/</a></p>",
+  "creators": [
+    {"name": "Guerineau, Camille", "orcid": "0009-0009-0364-6396", "affiliation": "Loch Ness"}
+  ],
+  "license": "cc-by-4.0",
+  "keywords": ["specification", "human-made content", "certification label", "verification", "content provenance", "file fingerprint", "SHA-256", "generative AI", "creators", "trust marks"],
+  "related_identifiers": [
+    {"identifier": "10.5281/zenodo.23049397", "relation": "isSupplementTo", "scheme": "doi"},
+    {"identifier": "https://human-origin-label.lochness-paris.com/spec/", "relation": "isIdenticalTo", "scheme": "url"}
+  ],
+  "language": "eng"
+}

@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use or reference this specification, please cite it as below."
+title: "Human Origin Specification"
+version: "0.2"
+date-released: 2026-09-30
+type: software
+authors:
+  - family-names: Guerineau
+    given-names: Camille
+    orcid: "https://orcid.org/0009-0009-0364-6396"
+    affiliation: "Loch Ness"
+license: CC-BY-4.0
+url: "https://human-origin-label.lochness-paris.com/spec/"
+repository-code: "https://github.com/<your-account>/human-origin-spec"
+keywords:
+  - specification
+  - human-made content
+  - certification label
+  - content provenance
+  - file fingerprint
+  - SHA-256
+  - generative AI
+references:
+  - type: article
+    title: "Beyond AI detectors and self-declared labels: a process-based certification for human creators"
+    authors:
+      - family-names: Guerineau
+        given-names: Camille
+    doi: "10.5281/zenodo.23049397"
