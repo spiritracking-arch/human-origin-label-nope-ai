@@ -30,7 +30,7 @@ The label never claims that no AI tool was used at any point. It records a revie
 # 1. Fingerprint the original file locally
 sha256sum my-file.png
 # 2. Ask the public API whether it matches a certified work
-curl "https://human-origin-label.lochness-paris.com/api/v1/works?sha256=<64-character fingerprint>"
+curl "https://lochness-paris.com/verumano/api/v1/works?sha256=<64-character fingerprint>"
 ```
 
 Or open [`verify-file.html`](verify-file.html) in a browser.
