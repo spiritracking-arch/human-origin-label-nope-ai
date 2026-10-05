@@ -4,7 +4,7 @@ Open specification of the **Human Origin** label for human-made creative work: i
 
 - **Current version:** v0.2 (working draft), [read it here](human-origin-specification.md) or [online](https://human-origin-label.lochness-paris.com/spec/)
 - **Companion paper:** [doi:10.5281/zenodo.23049397](https://doi.org/10.5281/zenodo.23049397)
-- **Pilot:** [human-origin-label.lochness-paris.com](https://human-origin-label.lochness-paris.com/)
+- **Pilot:** [lochness-paris.com](https://lochness-paris.com/verumano/)
 
 ## What Human Origin is
 
