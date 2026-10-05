@@ -37,7 +37,7 @@ Or open [`verify-file.html`](verify-file.html) in a browser.
 
 ## Public API
 
-Read-only, no key, CORS open, 60 requests per minute. Documentation: [human-origin-label.lochness-paris.com/api/](https://human-origin-label.lochness-paris.com/api/)
+Read-only, no key, CORS open, 60 requests per minute. Documentation: [lochness-paris.com/verumano/api/](https://lochness-paris.com/verumano/api/)
 
 | Endpoint | Returns |
 | --- | --- |
