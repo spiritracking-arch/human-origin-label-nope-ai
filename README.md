@@ -1,4 +1,4 @@
-# Human Origin Specification
+# Verumano (Human Origin= Specification
 
 Open specification of the **Human Origin** label for human-made creative work: identifiers, statuses, review requirements, verification pages, badges, work fingerprints, revocation, privacy and third-party conformance.
 
