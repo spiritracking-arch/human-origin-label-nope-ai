@@ -1,0 +1,22 @@
+{
+  "name": "verumano",
+  "version": "0.1.0",
+  "description": "Verify Verumano human-made badges and file fingerprints. Read-only client for the public API, local SHA-256, and a <verumano-badge> web component.",
+  "type": "module",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": { "types": "./index.d.ts", "default": "./index.js" },
+    "./badge": "./badge.js"
+  },
+  "files": ["index.js", "index.d.ts", "sha256.js", "badge.js", "README.md", "LICENSE"],
+  "sideEffects": ["./badge.js"],
+  "engines": { "node": ">=18" },
+  "keywords": ["verumano", "human-made", "content-provenance", "certification", "badge", "sha256", "ai", "authenticity"],
+  "homepage": "https://lochness-paris.com/verumano/api/",
+  "repository": { "type": "git", "url": "git+https://github.com/spiritracking-arch/human-origin-label-nope-ai.git", "directory": "npm" },
+  "bugs": { "url": "https://github.com/spiritracking-arch/human-origin-label-nope-ai/issues" },
+  "author": "Camille Guerineau (https://lochness-paris.com/verumano/)",
+  "license": "MIT",
+  "scripts": { "test": "node test.js" }
+}
