@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Verumano demo</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <p class="kicker">npm i verumano</p>
+      <h1>Verify a human-made badge</h1>
+      <p class="lede">Three things the <code>verumano</code> package does, live against the public API. Nothing you drop here leaves your browser except a 64-character fingerprint.</p>
+    </header>
+
+    <section>
+      <h2><span>1</span> Look up a creator</h2>
+      <form id="lookup">
+        <label for="id">Creator ID</label>
+        <div class="row">
+          <input id="id" value="HO-2026-0001" autocomplete="off" spellcheck="false">
+          <button>Check</button>
+        </div>
+      </form>
+      <div id="creator" class="out" aria-live="polite"></div>
+    </section>
+
+    <section>
+      <h2><span>2</span> Show the live badge</h2>
+      <p class="note">One custom element. The image is rendered by the server at display time, so a revoked badge turns red everywhere.</p>
+      <div id="badge" class="badge"></div>
+      <pre><code id="snippet"></code></pre>
+    </section>
+
+    <section>
+      <h2><span>3</span> Check an exact file</h2>
+      <label class="drop" id="drop">
+        <input type="file" id="file">
+        <strong>Drop a file or click to choose</strong>
+        <small>Hashed locally with SHA-256, in 4 MB chunks</small>
+      </label>
+      <progress id="progress" max="1" value="0" hidden></progress>
+      <div id="result" class="out" aria-live="polite"></div>
+    </section>
+
+    <footer>
+      <a href="https://www.npmjs.com/package/verumano">npm</a> ·
+      <a href="https://github.com/spiritracking-arch/human-origin-label-nope-ai">GitHub</a> ·
+      <a href="https://lochness-paris.com/verumano/spec/">Specification</a> ·
+      <a href="https://lochness-paris.com/verumano/">Verumano</a>
+    </footer>
+  </main>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
