@@ -45,7 +45,7 @@ You can also call the steps separately: `hashFile(file)` then `findWorks(sha256)
 ## Show a badge
 
 ```html
-<script type="module" src="https://cdn.jsdelivr.net/npm/verumano@0.1.0/badge.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/verumano@0.1/badge.js"></script>
 
 <verumano-badge creator="HO-2026-0001" discipline="illustration"></verumano-badge>
 <verumano-badge creator="HO-2026-0001" discipline="illustration" theme="dark" size="s"></verumano-badge>

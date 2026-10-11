@@ -1,6 +1,6 @@
 {
   "name": "verumano",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Verify Verumano human-made badges and file fingerprints. Read-only client for the public API, local SHA-256, and a <verumano-badge> web component.",
   "type": "module",
   "main": "./index.js",
