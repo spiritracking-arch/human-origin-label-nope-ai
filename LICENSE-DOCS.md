@@ -2,5 +2,5 @@
 
 You may share and adapt them for non-commercial purposes only, provided you give appropriate credit, link to the licence and indicate if changes were made. Any commercial use requires prior written permission from the copyright holder. Full legal code: https://creativecommons.org
 
-The name "Human Origin", the badges and the logo are not covered by this licence. Implementing the specification does not grant the right to issue Human Origin badges or to present a service as Human Origin.
+The name "VERUMANO" (Human Origin label certification), the badges and the logo are not covered by this licence. Implementing the specification does not grant the right to issue Human Origin badges or to present a service as Human Origin.
 
