@@ -7,6 +7,6 @@ You may share and adapt them for any purpose, provided you give appropriate cred
 licence and indicate if changes were made. Full legal code:
 https://creativecommons.org/licenses/by/4.0/legalcode
 
-The name "Human Origin", the badges and the logo are not covered by this licence. Implementing the
+The name "VERUMANO" (Human Origin label certification), the badges and the logo are not covered by this licence. Implementing the
 specification does not grant the right to issue Human Origin badges or to present a service as
 Human Origin.
